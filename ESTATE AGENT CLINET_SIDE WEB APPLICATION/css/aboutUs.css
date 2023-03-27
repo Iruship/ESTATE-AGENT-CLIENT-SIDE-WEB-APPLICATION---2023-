@@ -1,0 +1,197 @@
+/* /Styles for the navigation bar */
+
+#nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.navigationBar-Container {
+    background-color: #eff4f0;
+    border-bottom: 2px groove #000000;
+    
+}
+
+.home-body {
+    background-color: rgb(188, 232, 195);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+/* Styles of the home page*/
+
+.header-main {
+    height: 54px;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-main .logo {
+    float: left;
+    position: absolute;
+    box-sizing: border-box;
+}
+.main-nav {
+    display: none;
+}
+
+.logo {
+    padding: 0% 0% 0% 3%;
+}
+
+.logo .img-logo {
+    width: 3%;
+    height: 3%;
+    float: left;
+}
+
+@media (min-width: 1070px) {
+
+    .main-nav {
+        display: block;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        text-align: right;
+        float: right;
+    }
+    .main-nav .main-nav-item {
+        display: none;
+    }
+
+    .header-main {
+        display: block !important;
+    }
+
+    .main-nav .main-nav-item {    
+        display: block;
+        height: 50px;
+        float: left;
+        position: relative;
+        margin-right: 8px;
+        line-height: 50px;
+        overflow: visible;
+        
+    }    
+    .main-nav .main-nav-item a {
+     transition: 0.3s ease;
+     color: white;
+     background-color:white;
+	 color : rgb(3, 38, 5);
+     cursor: pointer;
+	 padding:26%;	 
+    }
+    .main-nav a:hover, .main-nav-item .active{
+        background-color: rgb(219, 225, 166);
+        color: #000000;
+    }    
+    .main-nav .main-nav-item a.active {
+        background-color: rgb(219, 225, 166);
+        color: #151414;
+    }
+    .main-nav .main-nav-item a:hover {
+        color: #815353;
+        transition: 0.2s;
+    }
+    .main-nav .main-nav-item.properties {
+        color: #cabcbc;       
+    }
+    .header-main .logo {
+        display: block;
+        padding: 13px 8px;
+        padding-left: 38px;
+    }
+    .header-main .logo img, .header-main .logo svg {
+        width: 120px;
+        height: 24px;
+    }
+    .header-main .main-nav {
+        padding-right: 0px;
+    }
+    .header-main .main-nav .main-nav-item {
+        margin-right: 50px;
+    }
+}
+/* Styles for the about page/ */
+section {
+    font-size:100%;
+    color: white;
+    text-align: center;
+    font-family: Georgia, serif;
+	 
+}
+.about-us {
+    font-size: 200%;
+    padding-top: 8%;
+    font-family: Georgia, serif;
+    text-align:center;
+}
+.contact-info {
+    margin-top: 6%;
+    color:white; 
+    text-align: center;
+    font-family: Georgia, serif;
+}
+.about-moreInfo {
+    align-items: center;
+    width: 10%;
+	margin-left: 47%;
+}
+.contact-social {
+	padding: 5px;
+    display: inline;
+	text-align:justify;
+	width:18%;
+}
+.contact-social img:hover {
+	transition: 0.2s ease;
+    opacity: 0.9;
+}
+.contact-social  {
+    text-align: center;
+    padding: 2% 0% 0% 0%;
+    width: 18%;
+}
+.about-style {
+    position: absolute;
+    top: 5%;
+    bottom: 25%;
+    left: 25%;
+    right: 25%;
+}
+.place-logo {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    opacity: 52%;
+}
+.content{
+    height: 25%;
+    width: 100%;
+    box-shadow: 1px 1px 15px rgba(0,0,0,0.4);
+    scroll-behavior:initial;
+  }
+  .content .images{
+    height: 100%;
+    width: 100%;
+  }
+  .properties {
+    font-size:95%;
+    color: white;
+    text-align: center;
+    font-family: Georgia, serif;
+  }
+  .images img{
+    height: 100%;
+    width: 100%;
+  }
+
+  	 

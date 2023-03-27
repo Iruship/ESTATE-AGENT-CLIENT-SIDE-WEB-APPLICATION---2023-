@@ -1,0 +1,139 @@
+/* Styles for the navigation Bar */
+
+#nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.navigationBar-Container {
+    background-color: #ffffff;
+    border-bottom: 1px solid #D5D5D5;
+    
+}
+
+.home-body {
+    background-color: rgb(188, 232, 195);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+/* Styles for the Home Page */
+
+.header-main {
+    height: 50px;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-main .logo {
+    float: left;
+    position: absolute;
+    box-sizing: border-box;
+}
+.main-nav {
+    display: none;
+}
+
+.logo {
+    padding: 0% 0% 0% 3%;
+}
+
+.logo .img-logo {
+    width: 3%;
+    height: 3%;
+    float: left;
+}
+
+@media (min-width: 1070px) {
+
+    .main-nav {
+        display: block;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        text-align: right;
+        float: right;
+    }
+    .main-nav .main-nav-item {
+        display: none;
+    }
+
+    .header-main {
+        display: block !important;
+    }
+
+    .main-nav .main-nav-item {
+        float: left;
+        display: block;
+        height: 50px;
+        margin-right: 8px;
+        overflow: visible;
+        line-height: 50px;
+        position: relative;
+    }
+    
+    .main-nav .main-nav-item a {
+     transition: 0.2s ease;
+     color: white;
+     cursor: pointer;
+	 padding:26%;
+	 background-color:white;
+	 color : black;
+    }
+
+    .main-nav a:hover, .main-nav-item .active{
+        background-color: rgb(189, 189, 189);
+        color: #000000;
+    }
+    
+    .main-nav .main-nav-item a.active {
+        background-color: rgb(189, 189, 189);
+        color: #000000;
+    }
+    .main-nav .main-nav-item a:hover {
+        color: #ffffff;
+        transition: 0.2s;
+    }
+
+    .main-nav .main-nav-item.properties {
+        color: #372626;
+    }
+
+    .header-main .logo {
+        display: block;
+        padding: 13px 8px;
+        padding-left: 38px;
+    }
+
+    .header-main .logo img, .header-main .logo svg {
+        width: 120px;
+        height: 24px;
+    }
+
+    .header-main .main-nav {
+        padding-right: 0px;
+    }
+
+    .header-main .main-nav .main-nav-item {
+        margin-right: 50px;
+    }
+}
+
+
+/* /////////////////////////---FAVOURITE PAGE---///////////////////////// */
+
+.favourites-body {
+    background-color: rgb(188, 232, 195);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

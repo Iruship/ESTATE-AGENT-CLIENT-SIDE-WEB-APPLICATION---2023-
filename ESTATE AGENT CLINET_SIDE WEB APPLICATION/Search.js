@@ -1,0 +1,202 @@
+$(document).ready(function () {
+    var data = {
+      //Property one
+      properties: [
+        { 
+          id: "prop1",
+          type: "House",
+          bedrooms: 3,
+          price: 750000,
+          tenure: "Freehold",
+          description: "Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
+          poscode: "BS10 5AA",
+          location: "Petts Wood Road, Petts Wood, Orpington",
+          picture: "Images/Filter/1.jpeg",
+          url: "Property1.html",
+          added: {
+            month: "October",
+            day: 12,
+            year: 2022,
+          },
+        },
+  
+        {
+          //Property 2
+          id: "prop2",
+          type: "Flat",
+          bedrooms: 2,
+          price: 399995,
+          tenure: "Freehold",
+          description: "Presented in excellent decorative(Flat) order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
+          postcode: "BS10 5AB",
+          location: "Crofton Road Orpington BR6",
+          picture: "Images/Filter/2.jpeg",
+          url: "Property2.html",
+          added: {
+            month: "September",
+            day: 14,
+            year: 2022,
+          },
+        },
+        {
+          //Property 3
+          id: "prop3",
+          type: "Flat",
+          bedrooms: 5,
+          price: 180000,
+          tenure: "Freehold",
+          description: "This stunning condo is located in the heart of the city, offering easy access to all the best restaurants, shops, and entertainment venues.<br> With an open floor plan, large windows, and high ceilings, this condo is the epitome of modern living. Enjoy a gourmet kitchen, spa-like bathroom, and private balcony with breathtaking views.",
+          poscode: "BS10 5AD",
+          location: "10 Downing Street, London, SW1A 2AA, UK",
+          picture: "Images/Filter/3.jpeg",
+          url: "Property3.html",
+          added: {
+            month: "November",
+            day: 24,
+            year: 2022,
+          },
+        },
+        {
+          //Property 4
+          id: "prop4",
+          type: "House",
+          bedrooms: 7,
+          price: 450000,
+          tenure: "Freehold",
+          poscode: "BS10 5AE",
+          description: "This charming cottage is the perfect retreat from the hustle and bustle of city life. Nestled in the countryside, this cozy home offers a peaceful retreat from the stresses of daily life.<br> With two bedrooms, a large living room, and a rustic kitchen, this cottage is perfect for a weekend getaway or as a full-time residence.",
+          location: "2 Park Lane, Bristol, BS1 5BJ, UK",
+          picture: "Images/Filter/4.jpeg",
+          url: "Property4.html",
+          added: {
+            month: "May",
+            day: 23,
+            year: 2022,
+          },
+        },
+  
+        {
+          //Property 5
+          id: "prop5",
+          type: "Flat",
+          bedrooms: 11,
+          price: 180000,
+          tenure: "Freehold",
+          poscode: "BS10 5AA",
+          description: "This magnificent mansion is located on the beach, offering breathtaking ocean views from every room. With seven bedrooms, eight bathrooms, and a gourmet kitchen, this home is perfect for entertaining guests.<br> Enjoy a private pool, hot tub, and a large patio with a grill, perfect for enjoying the warm summer nights.",
+          location: "43 Windermere Road, Lake District, LA23 1EN, UK",
+          picture: "Images/Filter/5.jpeg",
+          url: "Property5.html",
+          added: {
+            month: "August",
+            day: 15,
+            year: 2022,
+          },
+        },
+  
+        {
+          //Property 6
+          id: "prop6",
+          type: "House",
+          bedroomm: 9,
+          price: 250000,
+          tenure: "Freehold",
+          poscode: "BS10 5AB",
+          description: "This large and spacious family home is located in a quiet neighborhood in the suburbs. With four bedrooms, three bathrooms, a large living room, and a fully-equipped kitchen, this home is perfect for a growing family.<br> Enjoy a large backyard, perfect for hosting summer barbecues, and a two-car garage.",
+          location: "49 Windermere Road, Lake District, LA23 1EN, UK",
+          picture: "Images/Filter/6.jpeg",
+          url: "Property6.html",
+          added: {
+            month: "April",
+            day: 12,
+            year: 2022,
+          },
+        },
+  
+        {
+          //Property 6
+          id: "prop7",
+          type: "House",
+          bedrooms: 4,
+          price: 350000,
+          tenure: "Freehold",
+          poscode: "BS10 5AD",
+          description: "This historic townhouse is located in the city center, offering easy access to all the best restaurants, shops, and entertainment venues.<br> With three bedrooms, two bathrooms, a spacious living room, and a large kitchen, this home is perfect for city living.<br> Enjoy high ceilings, original hardwood floors, and a private patio, perfect for enjoying a cup of coffee in the morning.",
+          location: "24 Princes Street, Edinburgh, EH2 2HG, UK",
+          picture: "Images/Filter/7.jpeg",
+          url: "Property7.html",
+          added: {
+            month: "September",
+            day: 24,
+            year: 2012,
+          },
+        },      
+      ],
+    };
+    // 7 Properties in total
+     
+    // Searching a property
+    $(function () {
+      $("#search").on("click", function () {
+  
+        var propertyType = $("#typeProp option:selected").text();
+        var priceOfProperty = $("#price option:selected").val();
+        var date = $("#datepicker").val();
+        var roomCount = $("#spinner").val();
+        var postCodeArea = $("#postcode option:selected").text();
+        var result = "<div class='container'>";        
+        for (var i in data.properties) {
+          if (priceOfProperty == data.properties[i].price) {
+            if (roomCount == data.properties[i].bedrooms) {
+                if (propertyType == data.properties[i].type) {
+                  if (postCodeArea == data.properties[i].postcode) {
+  
+                result +=
+                "<div class='card'>" +
+                  "<img class='card-img-top img-fluid'" +
+                  "src=" +
+                  data.properties[i].picture +
+                  " />" +
+                  "<h1 class='polaroid-title'>" +
+                  data.properties[i].location +
+                  "</h1>" +
+                  "<h3>" +
+                  data.properties[i].price +
+                  "</h3>" +
+                  "<p class='polaroid-text'>" +
+                  data.properties[i].description +
+                  "</p>" +
+                  "<a class='btn btn-primary' href='" +
+                  data.properties[i].url +
+                  "'>Visit Property</a>" +
+                  "</div>"
+                }
+              }
+            } else {
+              result +=
+                "<div class='card'>" +
+                "<img class='card-img-top img-fluid'" +
+                "src=" +
+                data.properties[i].picture +
+                " />" +
+                "<h1 class='card-title'>" +
+                data.properties[i].location +
+                "</h1>" +
+                "<h3>" +
+                data.properties[i].price +
+                "</h3>" +
+                "<p class='card-text'>" +
+                data.properties[i].description +
+                "</p>" +
+                "<a class='btn btn-primary' href='" +
+                data.properties[i].url +
+                "'>Visit Property</a>" +
+                "</div>"
+            }
+          }
+        }
+        result += "</div>";
+        document.getElementById("result").innerHTML = result;
+      });
+    });
+  });
